@@ -2,6 +2,55 @@ body {
     min-width:600px!important;
 }
 
+/* Enhancements panel */
+#enhancements {
+  position: absolute;
+  bottom: 0%;
+  left: -%;
+  width: 320px;
+  height: 395px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Exercise backgrounds */
+#exercise_canvas {
+  padding: 0;
+  margin: 0;
+  height: 580px;
+  width: 80%; /*TODO: fix this to not be next to enhancements*/
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  z-index: -1;
+}
+
+.fixation {
+  background-image: url('https://4vector.com/i/free-vector-mickey-mouse-2_033579_mickey-mouse-2.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 65% center;
+  background-size: 300px 300px;
+}
+
+.saccades {
+  background-image: url('https://4vector.com/i/free-vector-mickey-mouse-2_033579_mickey-mouse-2.png'), url('https://4vector.com/i/free-vector-minnie-mouse_033474_minnie-mouse.png');
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed;
+  background-position: 30% center, right center;
+  background-size: 300px 300px, 300px 300px;
+}
+
+.pursuits {
+
+}
+
+.peripherals {
+  background-color: red;
+  background-image: url('http://eyecanlearn.com/wp-content/uploads/2014/05/Periphery-Circles-Animation.gif');
+  background-size: cover;
+}
+
 /* Video Feed Styling */
 #overlay {
     z-index: 1;
@@ -28,9 +77,6 @@ body {
     padding-left: inherit;
 }
 
-li {
-    padding-left: 50px;
-}
 .navbar-right li {
     padding-right: 20px;
 }

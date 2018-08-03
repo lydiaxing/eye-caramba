@@ -31,7 +31,7 @@ function PopUpInstruction(){
   * Show the help instructions right at the start.
   */
 function helpModalShow() {
-    $('#helpModal').modal('show');
+    //$('#helpModal').modal('show');
 }
 
 /**

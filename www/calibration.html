@@ -43,6 +43,15 @@ Instructions on use can be found in the README repository.
                 <!-- Accuracy -->
                 <li id="Accuracy"><a>Not yet Calibrated</a></li>
                 <li onclick="Restart()"><a href="#">Recalibrate</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exercises <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a id="startFixation">Fixation</a></li>
+                    <li><a id="startSaccades">Saccades</a></li>
+                    <li><a id="startPursuits">Pursuits</a></li>
+                    <li><a id="startPeripherals">Central-peripheral integration</a></li>
+                  </ul>
+                </li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li><button class="helpBtn" data-toggle="modal" data-target="#helpModal"><a data-toggle="modal"><span class="glyphicon glyphicon-cog"></span> Help</a></li>
@@ -50,6 +59,16 @@ Instructions on use can be found in the README repository.
             </div>
           </div>
         </nav>
+        <div id="exercise_canvas">
+        </div>
+        <div id="enhancements" class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Enhancements</h3>
+          </div>
+          <div class="panel-body">
+            Enhancements will go here
+          </div>
+        </div>
         <!-- Calibration points -->
         <div class="calibrationDiv">
             <input type="button" class="Calibration" id="Pt1"></input>
@@ -84,6 +103,6 @@ Instructions on use can be found in the README repository.
         <!-- Latest compiled JavaScript -->
         <script src="./js/resize_canvas.js"></script>
         <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+        <script src="./js/exercise.js"></script>
     </body>
 </html>
