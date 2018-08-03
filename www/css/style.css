@@ -41,14 +41,30 @@ body {
   background-size: 300px 300px, 300px 300px;
 }
 
-.pursuits {
+@-webkit-keyframes pursuit {
+  from {background-position: 30% center;}
+  to {background-position: right center;}
+}
 
+.pursuits {
+  background-image: url('https://4vector.com/i/free-vector-classic-cartoon-style-clip-art-image-of-donald-duck_094279_classic_cartoon_style_clip_art_image_of_donald_duck_103/2010.01.18-10/classic_cartoon_style_clip_art_image_of_donald_duck_14.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 30% center;
+  background-size: 300px 300px;
+  -webkit-animation-name: pursuit;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
 }
 
 .peripherals {
-  background-color: red;
   background-image: url('http://eyecanlearn.com/wp-content/uploads/2014/05/Periphery-Circles-Animation.gif');
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 80% center;
+  background-size: 870px 450px;
 }
 
 /* Video Feed Styling */
