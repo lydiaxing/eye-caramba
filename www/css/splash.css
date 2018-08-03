@@ -1,0 +1,57 @@
+html {
+  height: 100%;
+}
+
+body {
+  xbackground-image: url('../media/splash.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../media/splash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 10%;
+}
+
+h1 {
+  font-size: 5em;
+  font-family: 'Arimo', sans-serif;
+}
+
+a {
+  color: white;
+  border: 4px solid white;
+  border-radius: .2em;
+  padding: .3em;
+  font-size: 2em;
+  margin-top: 2em;
+  animation-name: pulse;
+  animation-duration: .75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  from {
+    color: white;
+    border-color: white;
+  }
+  to {
+    color: #bababa;
+    border-color: #bababa;
+  }
+}
+
+a:hover {
+  color: #bababa;
+  text-decoration: none;
+  border-color: #bababa;
+}
