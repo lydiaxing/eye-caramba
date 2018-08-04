@@ -3,6 +3,22 @@ body {
     font-family: 'Open Sans', sans-serif !important;
 }
 
+.btn-primary {
+  background-color: #A7B0CA !important;
+  border-radius: .2em !important;
+  padding: .2em !important;
+  border-color: #8E9AAF !important;
+  color: black !important;
+}
+
+.chrono {
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #8E9AAF !important;
+}
+
 /* Enhancements panel */
 #enhancements {
   position: absolute;
@@ -14,6 +30,18 @@ body {
   margin: 0;
   border-color: #8E9AAF;
   border-radius: 0;
+}
+
+#infoModal h1 {
+  margin: 0;
+}
+
+#infoModal .modal-header {
+  padding-bottom: 0;
+}
+
+#infoModal hr {
+  margin: .3em;
 }
 
 /* Exercise backgrounds */

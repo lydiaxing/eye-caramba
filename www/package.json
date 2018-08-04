@@ -9,6 +9,7 @@
     "bootstrap": "^3.3.7",
     "browser-sync": "^2.24.4",
     "d3": "3.5.9",
+    "easytimer.js": "^2.2.3",
     "jquery": "^3.0.0",
     "sweetalert": "^2.1.0"
   }

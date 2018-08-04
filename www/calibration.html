@@ -68,7 +68,12 @@ Instructions on use can be found in the README repository.
             <h3 class="panel-title">Enhancements</h3>
           </div>
           <div class="panel-body">
-            Enhancements will go here
+            <h4>Exercise Directions:</h4>
+              <div id="enhanceDirections"></div>
+            <hr></hr>
+            <h4>Configurations:</h4>
+              <div id="enhanceConfigs"></div>
+            <a id="showHints">Too easy or too hard? Click for some tips</a>
           </div>
         </div>
         <!-- Calibration points -->
@@ -102,9 +107,57 @@ Instructions on use can be found in the README repository.
           </div>
         </div>
 
+        <div id="infoModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1>Tips and Tricks</h1>
+                <hr>
+              </div>
+              <div class="modal-body">
+                <h4>Too hard?</h4>
+                If you're having trouble, try:
+                <ul>
+                  <li>
+                    put a bean bag/stuffed animal on your head to prevent head movement
+                  </li>
+                  <li>
+                    close one eye and train until you can try two eyes again
+                  </li>
+                </ul>
+                </head>
+                <hr>
+                <h4>Too easy?</h4>
+                If you've got the exericses down, try:
+                <ul>
+                  <li>
+                    decreasing the target size
+                  </li>
+                  <li>
+                    follow the target with your mouse and your eyes
+                  </li>
+                  <li>
+                    stand on one leg or do math exercises while training
+                  </li>
+                  <li>
+                    try standing further/closer from the screen
+                  </li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button id="closeBtn" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
         <!-- Latest compiled JavaScript -->
         <script src="./js/resize_canvas.js"></script>
         <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./node_modules/easytimer.js/dist/easytimer.min.js"></script>
         <script src="./js/exercise.js"></script>
     </body>
 </html>
