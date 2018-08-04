@@ -21,7 +21,7 @@ Balance icon from [FontAwesome](https://fontawesome.com/).
 
 And last but not least, thanks to [Matt Boldt](https://mattboldt.com/) for [Typed.js](https://github.com/mattboldt/typed.js/)
 
-#Running on your laptop
+# Running on your laptop
 If you'd like to run this app on your laptop, I will give a brief disclaimer that a lot of the CSS was hardcoded as this project was created in <24 hours at a hackathon. It might not look exactly the same as the demo video. I also use CSS keyframes on background images,
 which is only supported in Chrome as of the date of this project.
 
