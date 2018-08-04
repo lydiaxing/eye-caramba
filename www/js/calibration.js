@@ -104,8 +104,6 @@ $(document).ready(function() {
                 $('#exercise-dropdown').animate({'backgroundColor': '#A7B0CA'}, 'medium');
                 $('#exercise-dropdown').animate({'backgroundColor': '#D1FAFF'}, 'medium');
                 $('#exercise-dropdown').animate({'backgroundColor': '#A7B0CA'}, 'medium');
-                $('#exercise-dropdown').animate({'backgroundColor': '#D1FAFF'}, 'medium');
-                $('#exercise-dropdown').animate({'backgroundColor': '#A7B0CA'}, 'medium');
                 //clear the calibration & hide the last middle button
                 ClearCanvas();
               } else {

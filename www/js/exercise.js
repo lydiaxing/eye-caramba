@@ -67,6 +67,7 @@ $('#startFixation').click(function() {
   $('#exercise_canvas').removeClass('saccades');
   $('#exercise_canvas').removeClass('pursuits');
   $('#exercise_canvas').removeClass('peripherals');
+  $('#exercise_canvas').css('background-size', `300px 300px`);
   $('#enhanceDirections').hide().html(fixationDirections).fadeIn();
   $('#enhanceConfigs').hide().html(fixationConfigs).fadeIn();
   $('#targetSize').on('change', function() {
@@ -105,6 +106,7 @@ $('#startSaccades').click(function() {
   $('#exercise_canvas').removeClass('fixation');
   $('#exercise_canvas').removeClass('pursuits');
   $('#exercise_canvas').removeClass('peripherals');
+  $('#exercise_canvas').css('background-size', `300px 300px, 300px 300px`);
   $('#enhanceDirections').hide().html(saccadesDirections).fadeIn();
   $('#enhanceConfigs').hide().html(saccadesConfigs).fadeIn();
   $('#targetSize').on('change', function() {
@@ -143,6 +145,7 @@ $('#startPursuits').click(function() {
   $('#exercise_canvas').removeClass('fixation');
   $('#exercise_canvas').removeClass('saccades');
   $('#exercise_canvas').removeClass('peripherals');
+  $('#exercise_canvas').css('background-size', `300px 300px`);
   $('#enhanceDirections').hide().html(pursuitsDirections).fadeIn();
   $('#enhanceConfigs').hide().html(pursuitsConfigs).fadeIn();
   $('#targetSize').on('change', function() {
@@ -188,5 +191,6 @@ $('#startPeripherals').click(function() {
   $('#exercise_canvas').removeClass('saccades');
   $('#enhanceDirections').hide().html(peripheralDirections).fadeIn();
   $('#enhanceConfigs').hide().html(peripheralConfigs).fadeIn();
+  $('#exercise_canvas').css('background-size', `870px 450px`);
   $('#enhancements').fadeIn();
 });
