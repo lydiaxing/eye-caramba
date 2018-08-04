@@ -15,6 +15,8 @@ Splash page photo by [rawpixel](https://unsplash.com/photos/vL8sFRXcDLI?utm_sour
 
 Favicon made by [Smashicons](https://www.flaticon.com/authors/smashicons) from [www.flaticon.com](https://www.flaticon.com/) is licensed by [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/).
 
+Thanks to [Albert Gonzalez](https://github.com/albert-gonzalez/) for [EasyTimer](https://github.com/albert-gonzalez/easytimer.js);
+
 #Running on your laptop
 If you'd like to run this app on your laptop, I will give a brief disclaimer that a lot of the CSS was hardcoded as this project was created in <24 hours at a hackathon. It might not look exactly the same as the demo video. I also use CSS keyframes on background images,
 which is only supported in Chrome as of the date of this project.

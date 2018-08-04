@@ -84,7 +84,7 @@ body {
   background-position: 30% center;
   background-size: 300px 300px;
   -webkit-animation-name: pursuit;
-  -webkit-animation-duration: 2s;
+  -webkit-animation-duration: 1.5s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
   -webkit-animation-timing-function: linear;
