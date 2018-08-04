@@ -36,6 +36,7 @@ body {
   margin: 0;
   border-color: #8E9AAF;
   border-radius: 0;
+  box-shadow: 3px 0px 3px lightgray !important;
 }
 
 hr {
@@ -160,10 +161,19 @@ hr {
 
 #webgazerVideoFeed {
   border: 5px solid #A7B0CA;
+  border-top-color: #8E9AAF;
+  border-bottom-color: #8E9AAF;
+  box-shadow: 3px 0px 1px lightgray !important;
+  z-index: 1;
+  position: relative;
 }
 
 .modal-dialog button {
   height: 34px;
+}
+
+i {
+  padding-right: .3em;
 }
 
 .dropdown-menu{
@@ -212,10 +222,13 @@ hr {
     left: -15px;
     padding-left: 30px;
     padding-right: 20px;
+    z-index: 2;
+    position: relative;
 }
 #Accuracy {
     background-color: #8E9AAF;
     padding-left: inherit;
+    box-shadow: 3px 0px 1px lightgray !important;
 }
 
 .navbar-right li {

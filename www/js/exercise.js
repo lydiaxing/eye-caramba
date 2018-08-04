@@ -62,12 +62,13 @@ var peripheralConfigs = `
 `
 
 $('#startFixation').click(function() {
+  $('#exercise_canvas').hide().fadeIn();
   $('#exercise_canvas').addClass('fixation');
   $('#exercise_canvas').removeClass('saccades');
   $('#exercise_canvas').removeClass('pursuits');
   $('#exercise_canvas').removeClass('peripherals');
-  $('#enhanceDirections').html(fixationDirections);
-  $('#enhanceConfigs').html(fixationConfigs);
+  $('#enhanceDirections').hide().html(fixationDirections).fadeIn();
+  $('#enhanceConfigs').hide().html(fixationConfigs).fadeIn();
   $('#targetSize').on('change', function() {
     var s = $('#targetSize').val();
     $('#exercise_canvas').css('background-size', `${s}px ${s}px`);
@@ -95,16 +96,17 @@ $('#startFixation').click(function() {
   timer.addEventListener('reset', function(e) {
     $('.values').html(timer.getTimeValues().toString());
   });
-  $('#enhancements').show();
+  $('#enhancements').fadeIn();
 });
 
 $('#startSaccades').click(function() {
+  $('#exercise_canvas').hide().fadeIn();
   $('#exercise_canvas').addClass('saccades');
   $('#exercise_canvas').removeClass('fixation');
   $('#exercise_canvas').removeClass('pursuits');
   $('#exercise_canvas').removeClass('peripherals');
-  $('#enhanceDirections').html(saccadesDirections);
-  $('#enhanceConfigs').html(saccadesConfigs);
+  $('#enhanceDirections').hide().html(saccadesDirections).fadeIn();
+  $('#enhanceConfigs').hide().html(saccadesConfigs).fadeIn();
   $('#targetSize').on('change', function() {
     var s = $('#targetSize').val();
     $('#exercise_canvas').css('background-size', `${s}px ${s}px`);
@@ -132,16 +134,17 @@ $('#startSaccades').click(function() {
   timer.addEventListener('reset', function(e) {
     $('.values').html(timer.getTimeValues().toString());
   });
-  $('#enhancements').show();
+  $('#enhancements').fadeIn();
 });
 
 $('#startPursuits').click(function() {
+  $('#exercise_canvas').hide().fadeIn();
   $('#exercise_canvas').addClass('pursuits');
   $('#exercise_canvas').removeClass('fixation');
   $('#exercise_canvas').removeClass('saccades');
   $('#exercise_canvas').removeClass('peripherals');
-  $('#enhanceDirections').html(pursuitsDirections);
-  $('#enhanceConfigs').html(pursuitsConfigs);
+  $('#enhanceDirections').hide().html(pursuitsDirections).fadeIn();
+  $('#enhanceConfigs').hide().html(pursuitsConfigs).fadeIn();
   $('#targetSize').on('change', function() {
     var s = $('#targetSize').val();
     $('#exercise_canvas').css('background-size', `${s}px ${s}px`);
@@ -174,15 +177,16 @@ $('#startPursuits').click(function() {
   timer.addEventListener('reset', function(e) {
     $('.values').html(timer.getTimeValues().toString());
   });
-  $('#enhancements').show();
+  $('#enhancements').fadeIn();
 });
 
 $('#startPeripherals').click(function() {
+  $('#exercise_canvas').hide().fadeIn();
   $('#exercise_canvas').addClass('peripherals');
   $('#exercise_canvas').removeClass('pursuits');
   $('#exercise_canvas').removeClass('fixation');
   $('#exercise_canvas').removeClass('saccades');
-  $('#enhanceDirections').html(peripheralDirections);
-  $('#enhanceConfigs').html(peripheralConfigs);
-  $('#enhancements').show();
+  $('#enhanceDirections').hide().html(peripheralDirections).fadeIn();
+  $('#enhanceConfigs').hide().html(peripheralConfigs).fadeIn();
+  $('#enhancements').fadeIn();
 });
