@@ -27,7 +27,7 @@ var saccadesDirections = `
   <p>Look between Minnie and Mickey. Try timing looks to the metronome, and speed up if it's too easy.</p>
 `;
 
-var saccadesConfig = `
+var saccadesConfigs = `
 <p>
   Target size:
   <input type="range" min="1" max="300" value="300" class="slider" id="targetSize">
@@ -38,15 +38,28 @@ var pursuitsDirections = `
   <p>Follow Donald Duck smoothly with your eyes.</p>
 `;
 
-var pursuitsConfig = `
+var pursuitsConfigs = `
 <p>
   Target size:
   <input type="range" min="1" max="300" value="300" class="slider" id="targetSize">
 </p>
 <p>
-  Target size:
+  Target speed:
   <input type="range" min="0" max="3" value="1.5" class="slider" id="targetSpeed">
 </p>
+`;
+
+var peripheralDirections = `
+  <p>Notice each of the colored dots around the center dot but use
+    your peripheral vision - keep your eyes focused on the center dot at all times!</p>
+  <p>To make it harder, put your finger on the outside dot that's the same
+    color as the center dot, but again, the key is to keep your eyes focused on the
+    center dot.</p>
+`
+
+var peripheralConfigs = `
+  <p>Check out tips below to make
+    this exercises easier or harder.</p>
 `
 
 $('#startFixation').click(function() {
@@ -134,6 +147,11 @@ $('#startPursuits').click(function() {
     var s = $('#targetSize').val();
     $('#exercise_canvas').css('background-size', `${s}px ${s}px`);
   });
+  $('#targetSpeed').on('change', function(){
+    var s = $('#targetSpeed').val();
+    var speed = 2.5 - s;
+    $('#exercise_canvas').css('-webkit-animation-duration', `${speed}s`);
+  });
 
   var timer = new Timer();
   $('.startButton').click(function () {
@@ -165,5 +183,7 @@ $('#startPeripherals').click(function() {
   $('#exercise_canvas').removeClass('pursuits');
   $('#exercise_canvas').removeClass('fixation');
   $('#exercise_canvas').removeClass('saccades');
+  $('#enhanceDirections').html(peripheralDirections);
+  $('#enhanceConfigs').html(peripheralConfigs);
   $('#enhancements').show();
 });
