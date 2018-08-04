@@ -150,18 +150,39 @@ hr {
     xborder-bottom-right-radius: .3em;
 }
 
+.navbar li {
+  transition: 0.3s;
+}
+
+.navbar li:hover {
+  background-color: #8E9AAF;
+}
+
 #webgazerVideoFeed {
-  xborder-bottom-right-radius: .3em;
   border: 5px solid #A7B0CA;
 }
 
-#Accuracy a {
-  xborder-radius: .3em;
+.modal-dialog button {
+  height: 34px;
 }
 
 .dropdown-menu{
   background-color: #A7B0CA !important;
   padding: 0 !important;
+  transition: 0.3s;
+}
+
+.dropdown-toggle, .navbar a {
+  transition: 0.3s !important;
+}
+
+.dropdown-toggle:hover .dropdown-menu{
+  visibility: visible !important;
+  display: block !important;
+}
+
+.dropdown-menu: hover, .dropdown-toggle, .navbar a {
+  background-color: #8E9AAF !important;
 }
 
 .panel-heading {
