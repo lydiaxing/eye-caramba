@@ -16,11 +16,23 @@
 <body>
   <div id="main">
     <h1>Free, convenient vision therapy</h1>
-    <p>Comprehensive and easy-to-use</p>
+    <p>Effective non-surgical treatment for <span id="typed"></span></p>
     <a href="/calibration.html">Get started</a>
   </div>
+
   <script src="./node_modules/jquery/dist/jquery.min.js"></script>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="./node_modules/typed.js/lib/typed.min.js"></script>
+
+  <script>
+    var typed = new Typed('#typed', {
+      strings: ["lazy eye", "strabismus", "crossed eyes", "amblyopia"],
+      typeSpeed: 60,
+      backSpeed: 45,
+      loop: true,
+      loopCount: Infinity,
+    });
+  </script>
 </body>
 
 </html>
