@@ -24,7 +24,7 @@ $('body').on('click', '#showHints', function() {
 });
 
 var saccadesDirections = `
-  <p>Look between Minnie and Mickey. Try timing looks to the metronome, and speed up if it's too easy.</p>
+  <p>Look between Minnie and Mickey. Try timing glances to a metronome, and speed up if it's too easy.</p>
 `;
 
 var saccadesConfigs = `
@@ -52,14 +52,12 @@ var pursuitsConfigs = `
 var peripheralDirections = `
   <p>Notice each of the colored dots around the center dot but use
     your peripheral vision - keep your eyes focused on the center dot at all times!</p>
-  <p>To make it harder, put your finger on the outside dot that's the same
-    color as the center dot, but again, the key is to keep your eyes focused on the
-    center dot.</p>
 `
 
 var peripheralConfigs = `
-  <p>Check out tips below to make
-    this exercises easier or harder.</p>
+<p>To make it harder, put your finger on the outside dot that's the same
+  color as the center dot, but again, the key is to keep your eyes focused on the
+  center dot.</p>
 `
 
 $('#startFixation').click(function() {
@@ -69,32 +67,32 @@ $('#startFixation').click(function() {
   $('#exercise_canvas').removeClass('peripherals');
   $('#enhanceDirections').html(fixationDirections);
   $('#enhanceConfigs').html(fixationConfigs);
-  $('#targetSize').on('change', function(){
+  $('#targetSize').on('change', function() {
     var s = $('#targetSize').val();
     $('#exercise_canvas').css('background-size', `${s}px ${s}px`);
   });
 
   var timer = new Timer();
-  $('.startButton').click(function () {
-      timer.start();
+  $('.startButton').click(function() {
+    timer.start();
   });
-  $('.pauseButton').click(function () {
-      timer.pause();
+  $('.pauseButton').click(function() {
+    timer.pause();
   });
-  $('.stopButton').click(function () {
-      timer.stop();
+  $('.stopButton').click(function() {
+    timer.stop();
   });
-  $('.resetButton').click(function () {
-      timer.reset();
+  $('.resetButton').click(function() {
+    timer.reset();
   });
-  timer.addEventListener('secondsUpdated', function (e) {
-      $('.values').html(timer.getTimeValues().toString());
+  timer.addEventListener('secondsUpdated', function(e) {
+    $('.values').html(timer.getTimeValues().toString());
   });
-  timer.addEventListener('started', function (e) {
-      $('.values').html(timer.getTimeValues().toString());
+  timer.addEventListener('started', function(e) {
+    $('.values').html(timer.getTimeValues().toString());
   });
-  timer.addEventListener('reset', function (e) {
-      $('.values').html(timer.getTimeValues().toString());
+  timer.addEventListener('reset', function(e) {
+    $('.values').html(timer.getTimeValues().toString());
   });
   $('#enhancements').show();
 });
@@ -106,32 +104,32 @@ $('#startSaccades').click(function() {
   $('#exercise_canvas').removeClass('peripherals');
   $('#enhanceDirections').html(saccadesDirections);
   $('#enhanceConfigs').html(saccadesConfigs);
-  $('#targetSize').on('change', function(){
+  $('#targetSize').on('change', function() {
     var s = $('#targetSize').val();
     $('#exercise_canvas').css('background-size', `${s}px ${s}px`);
   });
 
   var timer = new Timer();
-  $('.startButton').click(function () {
-      timer.start();
+  $('.startButton').click(function() {
+    timer.start();
   });
-  $('.pauseButton').click(function () {
-      timer.pause();
+  $('.pauseButton').click(function() {
+    timer.pause();
   });
-  $('.stopButton').click(function () {
-      timer.stop();
+  $('.stopButton').click(function() {
+    timer.stop();
   });
-  $('.resetButton').click(function () {
-      timer.reset();
+  $('.resetButton').click(function() {
+    timer.reset();
   });
-  timer.addEventListener('secondsUpdated', function (e) {
-      $('.values').html(timer.getTimeValues().toString());
+  timer.addEventListener('secondsUpdated', function(e) {
+    $('.values').html(timer.getTimeValues().toString());
   });
-  timer.addEventListener('started', function (e) {
-      $('.values').html(timer.getTimeValues().toString());
+  timer.addEventListener('started', function(e) {
+    $('.values').html(timer.getTimeValues().toString());
   });
-  timer.addEventListener('reset', function (e) {
-      $('.values').html(timer.getTimeValues().toString());
+  timer.addEventListener('reset', function(e) {
+    $('.values').html(timer.getTimeValues().toString());
   });
   $('#enhancements').show();
 });
@@ -143,37 +141,37 @@ $('#startPursuits').click(function() {
   $('#exercise_canvas').removeClass('peripherals');
   $('#enhanceDirections').html(pursuitsDirections);
   $('#enhanceConfigs').html(pursuitsConfigs);
-  $('#targetSize').on('change', function(){
+  $('#targetSize').on('change', function() {
     var s = $('#targetSize').val();
     $('#exercise_canvas').css('background-size', `${s}px ${s}px`);
   });
-  $('#targetSpeed').on('change', function(){
+  $('#targetSpeed').on('change', function() {
     var s = $('#targetSpeed').val();
     var speed = 2.5 - s;
     $('#exercise_canvas').css('-webkit-animation-duration', `${speed}s`);
   });
 
   var timer = new Timer();
-  $('.startButton').click(function () {
-      timer.start();
+  $('.startButton').click(function() {
+    timer.start();
   });
-  $('.pauseButton').click(function () {
-      timer.pause();
+  $('.pauseButton').click(function() {
+    timer.pause();
   });
-  $('.stopButton').click(function () {
-      timer.stop();
+  $('.stopButton').click(function() {
+    timer.stop();
   });
-  $('.resetButton').click(function () {
-      timer.reset();
+  $('.resetButton').click(function() {
+    timer.reset();
   });
-  timer.addEventListener('secondsUpdated', function (e) {
-      $('.values').html(timer.getTimeValues().toString());
+  timer.addEventListener('secondsUpdated', function(e) {
+    $('.values').html(timer.getTimeValues().toString());
   });
-  timer.addEventListener('started', function (e) {
-      $('.values').html(timer.getTimeValues().toString());
+  timer.addEventListener('started', function(e) {
+    $('.values').html(timer.getTimeValues().toString());
   });
-  timer.addEventListener('reset', function (e) {
-      $('.values').html(timer.getTimeValues().toString());
+  timer.addEventListener('reset', function(e) {
+    $('.values').html(timer.getTimeValues().toString());
   });
   $('#enhancements').show();
 });

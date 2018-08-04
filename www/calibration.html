@@ -10,53 +10,55 @@ This file provides the additional features:
 Instructions on use can be found in the README repository.
 -->
 <html>
-    <head>
-        <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
-        <TITLE>Vision Therapy</TITLE>
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
-        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <script async type="text/javascript" src="./webgazer.js"></script>
-        <link rel="icon" href="./media/favicon.ico">
-    </head>
-    <body LANG="en-US" LINK="#0000ff" DIR="LTR">
-      <canvas id="plotting_canvas" width="500" height="500" style="cursor:crosshair;"></canvas>
 
-        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="./node_modules/sweetalert/dist/sweetalert.min.js"></script>
+<head>
+  <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+  <TITLE>Vision Therapy</TITLE>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script async type="text/javascript" src="./webgazer.js"></script>
+  <link rel="icon" href="./media/favicon.ico">
+</head>
 
-        <script src="./js/main.js"></script>
-        <script src="./js/calibration.js"></script>
-        <script src="./js/precision_calculation.js"></script>
-        <script src="./js/precision_store_points.js"></script>
+<body LANG="en-US" LINK="#0000ff" DIR="LTR">
+  <canvas id="plotting_canvas" width="500" height="500" style="cursor:crosshair;"></canvas>
 
-        <nav id="webgazerNavbar" class="navbar navbar-default navbar-fixed-top">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <!-- The hamburger menu button -->
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./node_modules/sweetalert/dist/sweetalert.min.js"></script>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/calibration.js"></script>
+  <script src="./js/precision_calculation.js"></script>
+  <script src="./js/precision_store_points.js"></script>
+
+  <nav id="webgazerNavbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <!-- The hamburger menu button -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav">
-                <!-- Accuracy -->
-                <li id="Accuracy" class="pulse-animation"><a>Not Calibrated</a></li>
-                <li onclick="Restart()"><a href="#">Recalibrate</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exercises <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a id="startFixation">Fixation</a></li>
-                    <li><a id="startSaccades">Saccades</a></li>
-                    <li><a id="startPursuits">Pursuits</a></li>
-                    <li><a id="startPeripherals">Central-peripheral integration</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li><button class="helpBtn" data-toggle="modal" data-target="#helpModal"><a data-toggle="modal"><span class="glyphicon glyphicon-cog"></span> Help</a></li>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <!-- Accuracy -->
+          <li id="Accuracy" class="pulse-animation"><a>Not Calibrated</a></li>
+          <li onclick="Restart()"><a href="#">Recalibrate</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exercises <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a id="startFixation">Fixation</a></li>
+              <li><a id="startSaccades">Saccades</a></li>
+              <li><a id="startPursuits">Pursuits</a></li>
+              <li><a id="startPeripherals">Central-peripheral integration</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><button class="helpBtn" data-toggle="modal" data-target="#helpModal"><a data-toggle="modal"><span class="glyphicon glyphicon-cog"></span> Help</a></li>
               </ul>
             </div>
           </div>
@@ -73,6 +75,8 @@ Instructions on use can be found in the README repository.
             <hr></hr>
             <h4>Configurations:</h4>
               <div id="enhanceConfigs"></div>
+          </div>
+          <div class="panel-footer">
             <a id="showHints">Too easy or too hard? Click for some tips</a>
           </div>
         </div>
@@ -100,64 +104,63 @@ Instructions on use can be found in the README repository.
               </div>
               <div class="modal-footer">
                 <button id="closeBtn" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="Restart()">Calibrate</button>
-              </div>
-            </div>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="Restart()">Calibrate</button>
+      </div>
+    </div>
 
+    </div>
+    </div>
+
+    <div id="infoModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1>Tips and Tricks</h1>
+            <hr>
+          </div>
+          <div class="modal-body">
+            <h4>Too hard?</h4> If you're having trouble, try:
+            <ul>
+              <li>
+                put a bean bag/stuffed animal on your head to prevent head movement
+              </li>
+              <li>
+                close one eye and train until you can try two eyes again
+              </li>
+            </ul>
+            </head>
+            <hr>
+            <h4>Too easy?</h4> If you've got the exericses down, try:
+            <ul>
+              <li>
+                decreasing the target size
+              </li>
+              <li>
+                follow the target with your mouse and your eyes
+              </li>
+              <li>
+                stand on one leg or do math exercises while training
+              </li>
+              <li>
+                try standing further/closer from the screen
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button id="closeBtn" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
 
-        <div id="infoModal" class="modal fade" role="dialog">
-          <div class="modal-dialog">
+      </div>
+    </div>
 
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1>Tips and Tricks</h1>
-                <hr>
-              </div>
-              <div class="modal-body">
-                <h4>Too hard?</h4>
-                If you're having trouble, try:
-                <ul>
-                  <li>
-                    put a bean bag/stuffed animal on your head to prevent head movement
-                  </li>
-                  <li>
-                    close one eye and train until you can try two eyes again
-                  </li>
-                </ul>
-                </head>
-                <hr>
-                <h4>Too easy?</h4>
-                If you've got the exericses down, try:
-                <ul>
-                  <li>
-                    decreasing the target size
-                  </li>
-                  <li>
-                    follow the target with your mouse and your eyes
-                  </li>
-                  <li>
-                    stand on one leg or do math exercises while training
-                  </li>
-                  <li>
-                    try standing further/closer from the screen
-                  </li>
-                </ul>
-              </div>
-              <div class="modal-footer">
-                <button id="closeBtn" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
+    <!-- Latest compiled JavaScript -->
+    <script src="./js/resize_canvas.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/easytimer.js/dist/easytimer.min.js"></script>
+    <script src="./js/exercise.js"></script>
+</body>
 
-          </div>
-        </div>
-
-        <!-- Latest compiled JavaScript -->
-        <script src="./js/resize_canvas.js"></script>
-        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="./node_modules/easytimer.js/dist/easytimer.min.js"></script>
-        <script src="./js/exercise.js"></script>
-    </body>
 </html>
