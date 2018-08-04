@@ -1,4 +1,5 @@
 $('#enhancements').hide();
+$('#exercise-dropdown').hide();
 
 var fixationDirections = `
 <p>Keep a steady gaze on Mickey. Start the timer and see how long you can maintain your gaze. What\'s the longest you can go? :)</p>

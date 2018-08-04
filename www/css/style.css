@@ -12,6 +12,11 @@ body {
   color: black !important;
 }
 
+.swal-button {
+  background-color: #A7B0CA !important;
+  color: black !important;
+}
+
 .chrono {
   text-align: center;
 }

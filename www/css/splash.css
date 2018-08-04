@@ -41,6 +41,7 @@ a {
   animation-timing-function: ease;
   animation-direction: alternate;
   font-weight: bold;
+  text-decoration: none;
 }
 
 @keyframes pulse {
