@@ -94,6 +94,7 @@ $(document).ready(function(){
                       var past50 = get_points() // retrieve the stored points
                       var precision_measurement = calculatePrecision(past50);
                       var accuracyLabel = "<a>Accuracy | "+precision_measurement+"%</a>";
+                      document.getElementById("Accuracy").classList.remove('pulse-animation');
                       document.getElementById("Accuracy").innerHTML = accuracyLabel; // Show the accuracy in the nav bar.
                       swal({
                         title: "Your accuracy measure is " + precision_measurement + "%",

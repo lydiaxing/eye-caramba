@@ -1,5 +1,6 @@
 body {
     min-width:600px!important;
+    font-family: 'Open Sans', sans-serif !important;
 }
 
 /* Enhancements panel */
@@ -11,6 +12,8 @@ body {
   height: 395px;
   padding: 0;
   margin: 0;
+  border-color: #8E9AAF;
+  border-radius: 0;
 }
 
 /* Exercise backgrounds */
@@ -73,23 +76,67 @@ body {
 }
 
 /* Navbar styling */
+@keyframes pulse {
+  from{
+    background-color: #A7B0CA !important;
+  }
+  to {
+    background-color: #8E9AAF !important;
+  }
+}
+
+.pulse-animation {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+}
+
 #webgazerNavbar {
     left: 320px;
     z-index: 0;
     box-shadow: 0px 3px 5px #ddd;
     border:0px;
-    background-color: #fff;
+    background-color: #A7B0CA;
+    xborder-bottom-left-radius: .3em;
+    xborder-bottom-right-radius: .3em;
+}
+
+#webgazerVideoFeed {
+  xborder-bottom-right-radius: .3em;
+  border: 5px solid #A7B0CA;
+}
+
+#Accuracy a {
+  xborder-radius: .3em;
+}
+
+.dropdown-menu{
+  background-color: #A7B0CA !important;
+}
+
+.panel-heading {
+  border-radius: 0;
+}
+
+.panel-heading, .navbar-toggle, .dropdown-menu>li>a:hover, .navbar-nav>.open>a, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: #8E9AAF !important;
+}
+
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+  color: black !important;
 }
 
 #Accuracy a{
-    background-color: #222;
-    color: #eee;
+    background-color: #8E9AAF;
+    color: black;
     left: -15px;
-    padding-left: 80px;
-    padding-right: 40px;
+    padding-left: 30px;
+    padding-right: 20px;
 }
 #Accuracy {
-    background-color: #222;
+    background-color: #8E9AAF;
     padding-left: inherit;
 }
 
@@ -101,11 +148,11 @@ body {
     padding: 15px;
     border: none;
     background: none;
-    color: #777;
+    color: black;
 }
 .helpBtn a {
     background: none;
-    color: #777;
+    color: black;
 }
 .helpBtn a:hover {
     color: black!important;
